@@ -5,6 +5,7 @@
  *
  * Iterate the colorsArray and for each color in the array, console.log "Hello World" in that color using Chalk.
  */
+import chalk from "chalk";
 
 let colorsArray = [
     'green',
@@ -13,3 +14,16 @@ let colorsArray = [
 ];
 
 // your code goes here
+colorsArray.forEach((element) => {
+    switch (element){
+        case 'green':
+            console.log(chalk.green('Hello world'));
+            break;
+        case 'blue':
+            console.log(chalk.blue('Hello world'));
+            break;
+        case 'red':
+            console.log(chalk.red('Hello world'));
+            break;
+    }
+})

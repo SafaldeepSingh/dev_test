@@ -3,5 +3,12 @@
  * When the write is complete, console.log that the file was saved successfully.
  */
 
-// your code goes here
+import fs from "fs";
 
+fs.writeFile('./test.txt', "Hello World!", err => {
+    if (err) {
+        console.error(err);
+    }else{
+        console.log("file was saved successfully")
+    }
+});

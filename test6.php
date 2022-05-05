@@ -18,6 +18,15 @@ class errorHandler {
     }
 
     // Code goes here
+    function test() {
+        try{
+            $this->errorsHappen();
+        }catch (\Exception $e){
+            echo "Error:" . $e->getMessage();
+        }
+    }
 }
 
 // Code goes here
+$obj = new errorHandler();
+$obj->test();

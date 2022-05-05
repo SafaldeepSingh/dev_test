@@ -53,7 +53,10 @@ Using Jquery make the "One Page Wonder" text change color to green when the user
         <div class="container">
             <h1 class="masthead-heading mb-0"><span id="targetText">One Page Wonder</span></h1>
           <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-          <a href="#" id="targetButton" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+          <a href="#" id="targetButton" class="btn btn-primary btn-xl rounded-pill mt-5"
+             onmouseover="changeColor('green')"
+             onmouseout="changeColor('white')"
+          >Learn More</a>
         </div>
       </div>
       <div class="bg-circle-1 bg-circle"></div>
@@ -126,7 +129,13 @@ Using Jquery make the "One Page Wonder" text change color to green when the user
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      function changeColor(color){
+        console.log("tst");
+        $("#targetText").css('color' , color);
+      }
+    </script>
 
   </body>
 

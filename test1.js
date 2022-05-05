@@ -30,7 +30,9 @@ let data = [
     }
 ];
 let output = [];
-
+output = data.map((element) => {
+    return element.socialPost.mediaUrl
+})
 // Your code here
 
 console.log(output);
